@@ -1,0 +1,47 @@
+CTRL SHIFT T - test jump
+CTRL R - run restart
+CTRL SPACE - podpowiedz
+
+odpalenie z kosoli
+ls - lokalizacja
+cd <folder> target
+java -jar ".\todo-app-0.0.1-SNAPSHOT.jar"
+
+public class TaskRepository { //klasa ktora sluzy do komunikacji z baza danych //api - punkt wejscia do dzialania na zbiorze
+
+localhost:8080 robimy get - malo, post - cos dodac
+
+rest - adaptery, wartstwa wystawiajaca nasze dane z modelu
+
+SpringDataRest - dobre na poczatek
+@RepositoryRestController - sluży do nadpisywan mapowan wystepujacych w RestDataRepository
+JSON - JavaScript Object Notation
+TaskRepository - obecnie whitelista, reprezentacja metod ktore chcemy
+SqlTaskRepository - implementacja, TaskRepository - kontrakt (lista rzeczy ktore mozna robic)
+
+resources - przed springiem: webinf metainf z plikami xml do configuracji, adr do klas - teraz glownie adnotacjami,
+ale czasem trzeba - np do bazy h2 zeby trzymala dane
+
+resources: application.properties - rozrzeszenie properties sygnalizuje plik płaski - bedzie przechowywac pary klucz-wartosc, kazda para moze miec wplyw na applikacje
+
+application.yml: task.allowMultipleTasksFromTemplate: false - (gdy beda flagi) flaga która nie pozwala nam stworzyc wiecej niz jedna serie zadan do zrobienia, np. wycieczka - jak jestemy na jednej, nie mozemy isc na druga
+
+java "-Dspring.profiles.active=test" -jar "todo-app-0.0.1-SNAPSHOT.jar"
+
+do wrazliwych danych korzystamy z serwera konfiguracyjnego
+
+bootstrap.yml konfiguracja do odpalania, pierwsza, przed: application.properties, application-xxx.yml
+dobre do serwera z konfiguracja, klucz
+
+create-drop: baza danych jest budowana za kazdym razem przy starcie, i dropowana przy wylaczeniu
+update: jednynie aktualizowana przy starcie
+validate: bezpieczna, nie rusza bazy, sprawdza model bazy czy jest zgodny
+
+
+Liquibase Migration,
+Flyway Migration - przy starcie springa sprawdza czy migracja nr1 zostala naniesiona na baze, honorowanie
+
+
+
+
+
