@@ -3,6 +3,7 @@ package io.github.tomaszpro99.controller;
 import io.github.tomaszpro99.model.Task;
 //import io.github.tomaszpro99.model.SqlTaskRepository;
 import io.github.tomaszpro99.model.TaskRepository;
+import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -50,8 +51,25 @@ class TaskController {
         if(!repository.existsById(id)) {//id definiowany w adr url, wiec mozemy sie do niego odwolac -@PathVariable - pozwala wziac z adr jakas zmienna - id
             return ResponseEntity.notFound().build(); //jezeli nie ma id - notFound
         }
-        toUpdate.setId(id);
-        repository.save(toUpdate); //w CrudRepository nie ma znaczenia czy tworzymy czy zapisujemy - jedna metoda
+        repository.findById(id)
+                .ifPresent(task -> {
+                    task.updateFrom(toUpdate);
+                    repository.save(task);
+                });
+        //toUpdate.setId(id);
+        //repository.save(toUpdate); //w CrudRepository nie ma znaczenia czy tworzymy czy zapisujemy - jedna metoda
         return ResponseEntity.noContent().build(); //skoro sie wszystko udalo - noContent - budujemy
+    }
+
+    @Transactional //kazda metoda tak oznaczona: na poczatku transaction begin, na koncu transaction commit
+    @PatchMapping("/tasks/{id}") //zmienianie putch f -> t, t -> f
+    public ResponseEntity<?> toggleTaks(@PathVariable int id) {
+        if (!repository.existsById(id)) {
+            return ResponseEntity.notFound().build();
+        }
+        repository.findById(id)
+                .ifPresent(task -> task.setDone(!task.isDone()));
+        //throw new RuntimeException(); //wycofanie transaction
+        return ResponseEntity.noContent().build();
     }
 }

@@ -1,7 +1,7 @@
 package io.github.tomaszpro99.model; // TaskRepository - klasa ktora sluzy do komunikacji z baza danych
 //api - punkt wejscia do dzialania na zbiorze
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import  org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;
