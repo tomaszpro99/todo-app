@@ -21,7 +21,9 @@ public class Task {
     private LocalDateTime deadline;
     @Embedded
     private Audit audit = new Audit();
-
+    @ManyToOne
+    @JoinColumn(name = "task_group_id")
+    private TaskGroup group;
     public Task() {
     }
     public int getId() { return id; }
