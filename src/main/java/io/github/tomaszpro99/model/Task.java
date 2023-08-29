@@ -27,11 +27,8 @@ public class Task {
     public Task() {
     }
     public int getId() { return id; }
-    //public void setId(int id) { this.id = id; }
-    //@Column(name = "desc") //Mapujemy pola ALBO getery,setery //Adnotacje na polach ALBO wyzej na geterach
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
-    //@Column(name="done")
     public boolean isDone() { return done; }
     public void setDone(boolean done) { this.done = done; }
 
@@ -41,10 +38,16 @@ public class Task {
     public void setDeadline(LocalDateTime deadline) {
         this.deadline = deadline;
     }
+    public TaskGroup getGroup() {
+        return group;
+    }
+    public void setGroup(TaskGroup group) {
+        this.group = group;
+    }
     public void updateFrom(final Task source) {
         description = source.description;
         done = source.done;
         deadline = source.deadline;
-
+        group = source.group;
     }
 }
