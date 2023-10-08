@@ -12,5 +12,6 @@ public interface TaskRepository {
     Optional<Task> findById(Integer id);//chcemy tylko konkretny task
     boolean existsById(Integer id); //metoda z CrudRepository- czy dany id istnieje
     List<Task> findByDone(boolean done);
+    boolean existsByDoneIsFalseAndGroup_Id(Integer groupId);
     Task save(Task entity); //task do zapisania, stworzenia
 }

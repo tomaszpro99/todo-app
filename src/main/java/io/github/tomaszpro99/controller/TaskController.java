@@ -13,6 +13,7 @@ import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.net.URI;
 import java.util.List;
 
 //spring szuka tych class @Repository
@@ -28,7 +29,11 @@ class TaskController {
     }
     //dostepne repozytorium - mozemy korzystac - nadpisujemy -- abstrakcje //metoda zwracajaca wszystkie taski, + info
 
-
+    @PostMapping("/tasks")
+    ResponseEntity<Task> createTask(@RequestBody @Valid Task toCreate) {
+        Task result = repository.save(toCreate);
+        return ResponseEntity.created(URI.create("/" + result.getId())).body(result);
+    }
     //@RequestMapping(method = RequestMethod.GET, path = "/tasks") //Nadpisujemy metode mapowania(jaki reguest? z metoda GET, oraz ze sciezka /tasks)
     @GetMapping(value = "/tasks", params = {"!sort", "!page", "!size"})
     //niektore requesty maja dedykowane mappingi //params - zgodnie ze sztuka do sortowania/stronnicowania danych, mapujemy gdy nie ma tych parametrow

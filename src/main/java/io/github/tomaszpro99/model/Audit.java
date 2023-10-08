@@ -1,22 +1,17 @@
 package io.github.tomaszpro99.model;
 
 import jakarta.persistence.Embeddable;
-import jakarta.persistence.MappedSuperclass;
 import jakarta.persistence.PrePersist;
 import jakarta.persistence.PreUpdate;
 
 import java.time.LocalDateTime;
 
-@Embeddable
+@Embeddable //ta klasa jest "osadzalna" do osadzenia w innym miejscu
 class Audit {
     private LocalDateTime createdOn;
     private LocalDateTime updatedOn;
     @PrePersist
-    void prePersist() {
-        createdOn = LocalDateTime.now();
-    }
+    void prePersist() {createdOn = LocalDateTime.now();}
     @PreUpdate
-    void preMerge() {
-        updatedOn = LocalDateTime.now();
-    }
+    void preMerge() {updatedOn = LocalDateTime.now();}
 }
