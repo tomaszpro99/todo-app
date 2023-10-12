@@ -23,7 +23,7 @@ public class TaskGroup {
     public TaskGroup() {
     }
     public int getId() { return id; }
-    public void setId(final int id) {this.id = id;}
+    void setId(final int id) {this.id = id;}
     public String getDescription() { return description; }
     public void setDescription(String description) { this.description = description; }
     public boolean isDone() { return done; }

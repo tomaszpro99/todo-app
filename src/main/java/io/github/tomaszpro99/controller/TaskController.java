@@ -51,6 +51,14 @@ class TaskController {
         return ResponseEntity.ok(repository.findAll(page).getContent()); //dla danej strony bierzemy Content
     }
 
+    @GetMapping("/tasks/{id}")
+    ResponseEntity<Task> readTask(@PathVariable int id) {
+        return repository.findById(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
+    }
+
+
     @PutMapping("/tasks/{id}") //mozna w springu oznaczyc id //naiwna implementacja - stworzy id jak nie ma
     ResponseEntity<?> updateTaks(@PathVariable int id, @RequestBody @Valid Task toUpdate) {//w rzadaniu metoda PUT znajduje sie cialo i z tego ciala chcemy wziac zawartosc - nowa reprezentacja taska //rzadanie ma przej validacje - pusty sting - blad 400 "Tasks descr must not be empty"
         if(!repository.existsById(id)) {//id definiowany w adr url, wiec mozemy sie do niego odwolac -@PathVariable - pozwala wziac z adr jakas zmienna - id

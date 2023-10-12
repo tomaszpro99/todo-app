@@ -17,6 +17,10 @@ public class Project {
     private Set<TaskGroup> groups;
     @OneToMany(mappedBy = "project")
     private Set<ProjectStep> steps;
+
+    Project() {
+    }
+
     public int getId() {return id;}
     void setId(int id) {this.id = id;}
     public String getDescription() {return description;}
