@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Service //warstwa logiki, posrednia miedzy repo a kontrolerem //tutaj miedzy dwoma repo
+//@Service //warstwa logiki, posrednia miedzy repo a kontrolerem //tutaj miedzy dwoma repo
 public class TaskGroupService {
     private TaskGroupRepository repository;
     private TaskRepository taskRepository;

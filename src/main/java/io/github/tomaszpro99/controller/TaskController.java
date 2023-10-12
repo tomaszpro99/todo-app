@@ -18,15 +18,13 @@ import java.util.List;
 
 //spring szuka tych class @Repository
 //@RestController //zmiana - rozwoj - adnotacja springowa - teraz jedynie mozemy odczytywac taski
-@RepositoryRestController //abstrakcja - znacznik pozwalajacy dostac sie do kontrolera, ktory jest uzywany przez spring mvc
+@RestController //abstrakcja - znacznik pozwalajacy dostac sie do kontrolera, ktory jest uzywany przez spring mvc
 class TaskController {
     private static final Logger logger = LoggerFactory.getLogger(TaskController.class); //beda tworzone logi z klasy TaskController
     private final TaskRepository repository; //potrzebujemy repozytorium na ktorym dzialamy //tworzymy aplikacje ktora nie bedzie upubliczniac TaskRepository
 
     //@Autowired wstrzyknij tutaj repozytorium do konstruktora, juz nie potrzebne
-    TaskController(final TaskRepository repository) {
-        this.repository = repository;
-    }
+    TaskController(final TaskRepository repository) {this.repository = repository;}
     //dostepne repozytorium - mozemy korzystac - nadpisujemy -- abstrakcje //metoda zwracajaca wszystkie taski, + info
 
     @PostMapping("/tasks")

@@ -14,18 +14,14 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 //@EnableConfigurationProperties(TaskConfigurationProperties.class)
 @SpringBootApplication
 public class TodoAppApplication /*implements RepositoryRestConfigurer*/ {
-
 	public static void main(String[] args) { SpringApplication.run(TodoAppApplication.class, args); }
 	@Bean //klasa z konfiguracja
 	Validator validator() { return new LocalValidatorFactoryBean(); }//obiekt zwrocony/utworzony z tej metody, typu Validator bedzie klasa zarzadzalna przez Springa
 	//rezygnacja z RepositoryRestResource - usunelismy wszystkie walidacje poza validator, ale trzeba mu powieziec zeby dzialal w @ReguestBody
-
 
 	/*@Override
 	public void configureValidatingRepositoryEventListener(ValidatingRepositoryEventListener validatingListener) {
 		validatingListener.addValidator("beforeCreate",validator());
 		validatingListener.addValidator("beforeSave",validator());
 	}*/
-
-
 }

@@ -3,11 +3,13 @@ package io.github.tomaszpro99.logic;
 import io.github.tomaszpro99.TaskConfigurationProperties;
 import io.github.tomaszpro99.model.*;
 import io.github.tomaszpro99.model.projection.GroupReadModel;
+import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
 
+//@Service
 public class ProjectService {
     private ProjectRepository repository;
     private TaskGroupRepository taskGroupRepository;
