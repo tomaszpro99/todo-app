@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Entity //bedzie tabela odpowiadajaca klasie
 @Table(name = "tasks")
-public class Task  {
+public class Task {
     @Id //oznaczamy id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -23,10 +23,20 @@ public class Task  {
     private TaskGroup group;
     Task() {
     }
-    public Task(String description,LocalDateTime deadline) {
+    public Task(String description, LocalDateTime deadline) {
+        this(description, deadline, null);
+    }
+    public Task(String description, LocalDateTime deadline, TaskGroup group) {
         this.description = description;
         this.deadline = deadline;
+        if (group != null) {
+            this.group = group;
+        }
     }
+//    public Task(String description,LocalDateTime deadline, TaskGroup group) {
+//        this.description = description;
+//        this.deadline = deadline;
+//    }
     public int getId() {return id;}
     public String getDescription() {return description;}
     public void setDescription(String description) {this.description = description;}

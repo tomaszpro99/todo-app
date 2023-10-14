@@ -1,7 +1,6 @@
 package io.github.tomaszpro99.controller;
 
 import io.github.tomaszpro99.model.Task;
-//import io.github.tomaszpro99.model.SqlTaskRepository;
 import io.github.tomaszpro99.model.TaskRepository;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
@@ -58,7 +57,7 @@ class TaskController {
 
 
     @PutMapping("/tasks/{id}") //mozna w springu oznaczyc id //naiwna implementacja - stworzy id jak nie ma
-    ResponseEntity<?> updateTaks(@PathVariable int id, @RequestBody @Valid Task toUpdate) {//w rzadaniu metoda PUT znajduje sie cialo i z tego ciala chcemy wziac zawartosc - nowa reprezentacja taska //rzadanie ma przej validacje - pusty sting - blad 400 "Tasks descr must not be empty"
+    ResponseEntity<?> updateTasks(@PathVariable int id, @RequestBody @Valid Task toUpdate) {//w rzadaniu metoda PUT znajduje sie cialo i z tego ciala chcemy wziac zawartosc - nowa reprezentacja taska //rzadanie ma przej validacje - pusty sting - blad 400 "Tasks descr must not be empty"
         if(!repository.existsById(id)) {//id definiowany w adr url, wiec mozemy sie do niego odwolac -@PathVariable - pozwala wziac z adr jakas zmienna - id
             return ResponseEntity.notFound().build(); //jezeli nie ma id - notFound
         }
@@ -74,7 +73,7 @@ class TaskController {
 
     @Transactional //kazda metoda tak oznaczona: na poczatku transaction begin, na koncu transaction commit
     @PatchMapping("/tasks/{id}") //zmienianie putch f -> t, t -> f
-    public ResponseEntity<?> toggleTaks(@PathVariable int id) {
+    public ResponseEntity<?> toggleTasks(@PathVariable int id) {
         if (!repository.existsById(id)) {
             return ResponseEntity.notFound().build();
         }

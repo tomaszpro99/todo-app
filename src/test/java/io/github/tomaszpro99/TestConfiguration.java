@@ -1,19 +1,30 @@
 package io.github.tomaszpro99;
 
 import io.github.tomaszpro99.model.Task;
+import io.github.tomaszpro99.model.TaskGroup;
 import io.github.tomaszpro99.model.TaskRepository;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.context.annotation.*;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.jdbc.datasource.DriverManagerDataSource;
 
+import javax.sql.DataSource;
+import java.lang.reflect.Field;
 import java.util.*;
 
 @Configuration
 public class TestConfiguration {
     @Bean
-//    @Primary
-//    @ConditionalOnMissingBean
+    @Primary
+    @Profile("!integration")
+    DataSource e2eTestDataSource() {
+        var result = new DriverManagerDataSource("jdbc:h2:mem:test;DB_CLOSE_DELAY=-1", "sa", "");
+        result.setDriverClassName("org.h2.Driver");
+        return result;
+    }
+
+    @Bean
+    @Primary
     @Profile("integration")
     TaskRepository testRepo() {
         return new TaskRepository() {
@@ -31,7 +42,18 @@ public class TestConfiguration {
             @Override
             public boolean existsByDoneIsFalseAndGroup_Id(Integer groupId) {return false;}
             @Override
-            public Task save(Task entity) { return tasks.put(tasks.size() +1, entity ); }
+            public Task save(Task entity) {
+                int key = tasks.size() +1;
+                try {
+                    var field = Task.class.getDeclaredField("id");
+                    field.setAccessible(true);
+                    field.set(entity, key);
+                } catch (NoSuchFieldException | IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+                tasks.put(key,entity);
+                return tasks.get(key);
+            }
         };
     }
 }
