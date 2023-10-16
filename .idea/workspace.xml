@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="63b4ccca-a7e7-46f1-bda7-6debf82d16d9" name="Changes" comment="Testy złożone: E2E, integracyjne">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/MvcConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/InfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/InfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/InfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/InfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/TaskController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/model/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo-db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/todo-db.mv.db" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="JUnit5 Test Class" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Ug6rU9MHKD1bRb5AHC1qXnCArw" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;8df0446d6be2bc8c492286a6e8c5e6fc&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="io.github.tomaszpro99.model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Puzzy\Documents\GitHub\todo-app\src\main\java\io\github\tomaszpro99\model" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="io.github.tomaszpro99.controller" />
+      <recent name="io.github.tomaszpro99.logic" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="io.github.tomaszpro99.controller" />
+      <recent name="io.github.tomaszpro99.adapter" />
+      <recent name="io.github.tomaszpro99.model" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TodoAppApplication">
+    <configuration name="ProjectServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.tomaszpro99.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.tomaszpro99.logic" />
+      <option name="MAIN_CLASS_NAME" value="io.github.tomaszpro99.logic.ProjectServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskControllerE2ETest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.tomaszpro99.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.tomaszpro99.controller" />
+      <option name="MAIN_CLASS_NAME" value="io.github.tomaszpro99.controller.TaskControllerE2ETest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskControllerIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.tomaszpro99.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.tomaszpro99.controller" />
+      <option name="MAIN_CLASS_NAME" value="io.github.tomaszpro99.controller.TaskControllerIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TaskControllerLightIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.tomaszpro99.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.tomaszpro99.controller" />
+      <option name="MAIN_CLASS_NAME" value="io.github.tomaszpro99.controller.TaskControllerLightIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoAppApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="todo-app" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.github.tomaszpro99.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="io.github.tomaszpro99" />
+      <option name="MAIN_CLASS_NAME" value="io.github.tomaszpro99.TodoAppApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TodoAppApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="todo-app" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="io.github.tomaszpro99.TodoAppApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.ProjectServiceTest" />
+        <item itemvalue="JUnit.TaskControllerLightIntegrationTest" />
+        <item itemvalue="JUnit.TaskControllerIntegrationTest" />
+        <item itemvalue="JUnit.TaskControllerE2ETest" />
+        <item itemvalue="JUnit.TodoAppApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63b4ccca-a7e7-46f1-bda7-6debf82d16d9" name="Changes" comment="" />
+      <created>1693349079699</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1693349079699</updated>
+      <workItem from="1693349081934" duration="4115000" />
+      <workItem from="1694362786765" duration="32000" />
+      <workItem from="1694916090885" duration="1130000" />
+      <workItem from="1694957148229" duration="10799000" />
+      <workItem from="1695040460861" duration="611000" />
+      <workItem from="1695173557307" duration="402000" />
+      <workItem from="1695770269543" duration="3671000" />
+      <workItem from="1696197663811" duration="6233000" />
+      <workItem from="1696209909620" duration="4038000" />
+      <workItem from="1696291563675" duration="6606000" />
+      <workItem from="1696544076337" duration="694000" />
+      <workItem from="1696681505982" duration="1458000" />
+      <workItem from="1696682986165" duration="4658000" />
+      <workItem from="1696813740103" duration="3165000" />
+      <workItem from="1696859899929" duration="3888000" />
+      <workItem from="1696897710029" duration="598000" />
+      <workItem from="1696949984651" duration="3904000" />
+      <workItem from="1697062991216" duration="10916000" />
+      <workItem from="1697127540419" duration="658000" />
+      <workItem from="1697214701711" duration="5235000" />
+      <workItem from="1697292199810" duration="8942000" />
+      <workItem from="1697378058933" duration="1217000" />
+      <workItem from="1697468146340" duration="4111000" />
+    </task>
+    <task id="LOCAL-00001" summary="backup">
+      <created>1693358209277</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1693358209277</updated>
+    </task>
+    <task id="LOCAL-00002" summary="backup">
+      <created>1693358263598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1693358263598</updated>
+    </task>
+    <task id="LOCAL-00003" summary="zakonczenie sekcji 7">
+      <created>1696730201493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696730201493</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Testy Jednostkowe">
+      <created>1697068973793</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697068973793</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Zadanie: Testy drugiego @Service: TaskGroupService">
+      <created>1697071135998</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697071135998</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Zakończenie sekcji 9: Dependency Injection">
+      <created>1697076442377</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697076442377</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Testy złożone: E2E, integracyjne">
+      <created>1697319755045</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697319755045</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="backup" />
+    <MESSAGE value="zakonczenie sekcji 7" />
+    <MESSAGE value="Testy Jednostkowe" />
+    <MESSAGE value="Zadanie: Testy drugiego @Service: TaskGroupService" />
+    <MESSAGE value="Zakończenie sekcji 9: Dependency Injection" />
+    <MESSAGE value="Testy złożone: E2E, integracyjne" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testy złożone: E2E, integracyjne" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/todo_app$ProjectServiceTest.ic" NAME="ProjectServiceTest Coverage Results" MODIFIED="1696869696237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>io.github.tomaszpro99.logic.*</FILTER>
+    </SUITE>
+  </component>
+</project>
