@@ -5,6 +5,7 @@ import io.github.tomaszpro99.model.*;
 import io.github.tomaszpro99.model.projection.GroupReadModel;
 import io.github.tomaszpro99.model.projection.GroupTaskWriteModel;
 import io.github.tomaszpro99.model.projection.GroupWriteModel;
+import io.github.tomaszpro99.model.projection.ProjectWriteModel;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -14,13 +15,13 @@ import java.util.stream.Collectors;
 public class ProjectService {
     private ProjectRepository repository;
     private TaskGroupRepository taskGroupRepository;
-    private TaskGroupService service;
+    private TaskGroupService taskGroupservice;
     private TaskConfigurationProperties config;
 
     public ProjectService(final ProjectRepository repository, final TaskGroupRepository taskGroupRepository, final TaskGroupService service, final TaskConfigurationProperties config) {
         this.repository = repository;
         this.taskGroupRepository = taskGroupRepository;
-        this.service = service;
+        this.taskGroupservice = service;
         this.config = config;
     }
 
@@ -28,8 +29,8 @@ public class ProjectService {
         return repository.findAll();
     }
 
-    public Project save (final Project toSave) {
-        return repository.save(toSave);
+    public Project save (final ProjectWriteModel toSave) {
+        return repository.save(toSave.toProject());
     }
     public GroupReadModel createGroup(LocalDateTime deadline, int projectId) {
         if (!config.getTemplate().isAllowMultipleTasks() && taskGroupRepository.existsByDoneIsFalseAndProject_Id(projectId)) {
@@ -49,7 +50,7 @@ public class ProjectService {
                                     }
                                 ).collect(Collectors.toSet())
                     );
-                    return service.createGroup(targetGroup);
+                    return taskGroupservice.createGroup(targetGroup, project);
                 }).orElseThrow(() -> new IllegalArgumentException("Project with given id not found"));
     }
 }

@@ -4,15 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="63b4ccca-a7e7-46f1-bda7-6debf82d16d9" name="Changes" comment="Testy złożone: E2E, integracyjne">
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/MvcConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/InfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/InfoController.java" afterDir="false" />
+    <list default="true" id="63b4ccca-a7e7-46f1-bda7-6debf82d16d9" name="Changes" comment="Filter &amp; Interceptor">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/ProjectController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/TaskGroupController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/logic/TaskService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/projection/ProjectWriteModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/projects.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/TodoAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/TodoAppApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/adapter/SqlTaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/adapter/SqlTaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/LoggerInterceptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/MvcConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/MvcConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/controller/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/InfoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/InfoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/logic/ProjectService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/logic/ProjectService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/logic/TaskGroupService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/logic/TaskGroupService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/Project.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/Project.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/ProjectStep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/ProjectStep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/projection/GroupReadModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/projection/GroupReadModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/projection/GroupWriteModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/github/tomaszpro99/model/projection/GroupWriteModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/io/github/tomaszpro99/TestConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/io/github/tomaszpro99/TestConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/spring-configuration-metadata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application-local.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application-local.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/TodoAppApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/TodoAppApplication.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/TaskController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/controller/TaskController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/model/Task.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/model/Task.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/model/TaskRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/io/github/tomaszpro99/model/TaskRepository.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/todo-db.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/todo-db.mv.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,6 +46,7 @@
       <list>
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
+        <option value="HTML File" />
         <option value="Class" />
       </list>
     </option>
@@ -53,6 +75,7 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
     &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
     &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
@@ -67,6 +90,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;spring.configuration.checksum&quot;: &quot;8df0446d6be2bc8c492286a6e8c5e6fc&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
@@ -219,7 +243,10 @@
       <workItem from="1697214701711" duration="5235000" />
       <workItem from="1697292199810" duration="8942000" />
       <workItem from="1697378058933" duration="1217000" />
-      <workItem from="1697468146340" duration="4111000" />
+      <workItem from="1697468146340" duration="7614000" />
+      <workItem from="1697506331497" duration="1777000" />
+      <workItem from="1697549799612" duration="9098000" />
+      <workItem from="1697563579398" duration="6105000" />
     </task>
     <task id="LOCAL-00001" summary="backup">
       <created>1693358209277</created>
@@ -270,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697319755045</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Filter &amp; Interceptor">
+      <created>1697474587574</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1697474587574</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -295,7 +329,18 @@
     <MESSAGE value="Zadanie: Testy drugiego @Service: TaskGroupService" />
     <MESSAGE value="Zakończenie sekcji 9: Dependency Injection" />
     <MESSAGE value="Testy złożone: E2E, integracyjne" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testy złożone: E2E, integracyjne" />
+    <MESSAGE value="Filter &amp; Interceptor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Filter &amp; Interceptor" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.StackOverflowError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/todo_app$ProjectServiceTest.ic" NAME="ProjectServiceTest Coverage Results" MODIFIED="1696869696237" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

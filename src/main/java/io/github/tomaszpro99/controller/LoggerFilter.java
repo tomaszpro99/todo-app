@@ -9,7 +9,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import java.io.IOException;
 
-@Component
+//@Component
 //@Order(Ordered.HIGHEST_PRECEDENCE) //v2
 class LoggerFilter implements Filter/*, Ordered*/ { //Ordered do uporządkowania w kolejnosci
     public static final Logger logger = LoggerFactory.getLogger(LoggerFilter.class); //tworzymy logger

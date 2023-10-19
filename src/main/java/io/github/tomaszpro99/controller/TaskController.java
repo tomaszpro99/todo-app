@@ -8,12 +8,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Pageable;
 //import org.springframework.data.rest.webmvc.RepositoryRestController; //powiazemy klase z naszym istniejacym repozytorium
-import org.springframework.data.rest.webmvc.RepositoryRestController;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 //spring szuka tych class @Repository
 //@RestController //zmiana - rozwoj - adnotacja springowa - teraz jedynie mozemy odczytywac taski
@@ -22,7 +22,12 @@ import java.util.List;
 class TaskController {
     private static final Logger logger = LoggerFactory.getLogger(TaskController.class); //beda tworzone logi z klasy TaskController
     private final TaskRepository repository; //potrzebujemy repozytorium na ktorym dzialamy //tworzymy aplikacje ktora nie bedzie upubliczniac TaskRepository
-    TaskController(final TaskRepository repository) {this.repository = repository;}
+    //private final TaskService service;
+
+    public TaskController(final TaskRepository repository/*, final TaskService service*/) {
+        this.repository = repository;
+        //this.service = service;
+    }
     //dostepne repozytorium - mozemy korzystac - nadpisujemy -- abstrakcje //metoda zwracajaca wszystkie taski, + info
 
     @PostMapping
@@ -33,10 +38,13 @@ class TaskController {
     //@RequestMapping(method = RequestMethod.GET, path = "/tasks") //Nadpisujemy metode mapowania(jaki reguest? z metoda GET, oraz ze sciezka /tasks)
     @GetMapping(params = {"!sort", "!page", "!size"})
     //niektore requesty maja dedykowane mappingi //params - zgodnie ze sztuka do sortowania/stronnicowania danych, mapujemy gdy nie ma tych parametrow
+    //CompletableFuture<ResponseEntity<List<Task>>> readAllTasks() { //TaskService!
     ResponseEntity<List<Task>> readAllTasks() {//spring zmieni obiekt javowy na: lista - json //zostawiamy ?(niewiadomy), nie jest to zbyw zawily przypadek - dopiero przy drugim uzywamy
         //ResponseEntity<?> readAllTasks() { //ResponseEntity reprezentuje odp //readAllTaska metoda bezparametrowa ktora zawola loggerem
 
         logger.warn("Exposing all the tasks!");
+        //return service.findAllAsync().thenApply(ResponseEntity::ok); //TaskService!
+
         //if (true) { return ResponseEntity.notFound(); } //dzialaloby z List<Task> + //return repository.findAll();
         return ResponseEntity.ok(repository.findAll()); //zwracamy z metody fabrykujacej status ok //odp to co zwraca findAll
     }

@@ -16,8 +16,7 @@
     {
       "name": "task.template.allow-multiple-tasks",
       "type": "java.lang.Boolean",
-      "sourceType": "io.github.tomaszpro99.TaskConfigurationProperties$Template",
-      "defaultValue": false
+      "sourceType": "io.github.tomaszpro99.TaskConfigurationProperties$Template"
     }
   ],
   "hints": []

@@ -18,9 +18,9 @@ public class ProjectStep {
     public int getId() {return id;}
     void setId(int id) {this.id = id;}
     public String getDescription() {return description;}
-    void setDescription(String description) {this.description = description;}
+    public void setDescription(String description) {this.description = description;}
     public int getDaysToDeadline() {return daysToDeadline;}
-    void setDaysToDeadline(int daysToDeadline) {this.daysToDeadline = daysToDeadline;}
+    public void setDaysToDeadline(int daysToDeadline) {this.daysToDeadline = daysToDeadline;}
     Project getProject() {return project;}
-    void setProject(Project project) {this.project = project;}
+    public void setProject(Project project) {this.project = project;}
 }

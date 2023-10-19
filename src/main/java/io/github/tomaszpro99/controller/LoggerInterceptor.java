@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-@Component
+//@Component
 class LoggerInterceptor implements HandlerInterceptor {
     public static final Logger logger = LoggerFactory.getLogger(LoggerInterceptor.class);
     @Override //jest jeszcze postHandle i afterHandle

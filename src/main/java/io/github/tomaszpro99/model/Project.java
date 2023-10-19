@@ -13,20 +13,17 @@ public class Project {
     private int id;
     @NotBlank(message = "Project's description must not be empty")
     private String description;
-    @OneToMany(mappedBy = "project")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "project")
     private Set<TaskGroup> groups;
-    @OneToMany(mappedBy = "project")
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "project")
     private Set<ProjectStep> steps;
-
-    Project() {
-    }
-
+    public Project() {}
     public int getId() {return id;}
     void setId(int id) {this.id = id;}
     public String getDescription() {return description;}
-    void setDescription(String description) {this.description = description;}
+    public void setDescription(String description) {this.description = description;}
     Set<TaskGroup> getGroups() {return groups;}
     void setGroups(Set<TaskGroup> groups) {this.groups = groups;}
     public Set<ProjectStep> getSteps() {return steps;}
-    void setSteps(Set<ProjectStep> steps) {this.steps = steps;}
+    public void setSteps(Set<ProjectStep> steps) {this.steps = steps;}
 }

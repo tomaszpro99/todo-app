@@ -1,11 +1,11 @@
 package io.github.tomaszpro99.logic;
 
+import io.github.tomaszpro99.model.Project;
 import io.github.tomaszpro99.model.TaskGroup;
 import io.github.tomaszpro99.model.TaskGroupRepository;
 import io.github.tomaszpro99.model.TaskRepository;
 import io.github.tomaszpro99.model.projection.GroupReadModel;
 import io.github.tomaszpro99.model.projection.GroupWriteModel;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,7 +20,10 @@ public class TaskGroupService {
     }
     //metoda tworzaca grupe z writemodel
     public GroupReadModel createGroup(GroupWriteModel source) {
-        TaskGroup result = repository.save(source.toGroup());
+        return createGroup(source, null);
+    }
+    GroupReadModel createGroup(final GroupWriteModel source, final Project project) {
+        TaskGroup result = repository.save(source.toGroup(project));
         return new GroupReadModel(result);
     }
     public List<GroupReadModel> readAll() {
